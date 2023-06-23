@@ -12,6 +12,11 @@
 		AE588FB82A44D16500BA213A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FB72A44D16500BA213A /* ViewController.swift */; };
 		AE588FBD2A44D16700BA213A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE588FBC2A44D16700BA213A /* Assets.xcassets */; };
 		AE588FC02A44D16700BA213A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE588FBE2A44D16700BA213A /* LaunchScreen.storyboard */; };
+		AE588FCB2A45CCB300BA213A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FCA2A45CCB300BA213A /* TabBarController.swift */; };
+		AE588FCE2A45CE1700BA213A /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FCD2A45CE1700BA213A /* UIColor + Ext.swift */; };
+		AE588FD12A45CE4800BA213A /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FD02A45CE4800BA213A /* Resources.swift */; };
+		AE588FD42A45D14000BA213A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FD32A45D14000BA213A /* MenuController.swift */; };
+		AE588FD72A45DBF500BA213A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE588FD62A45DBF500BA213A /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,10 @@
 		AE588FBC2A44D16700BA213A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE588FBF2A44D16700BA213A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE588FC12A44D16700BA213A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE588FCA2A45CCB300BA213A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AE588FCD2A45CE1700BA213A /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		AE588FD02A45CE4800BA213A /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		AE588FD32A45D14000BA213A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE588FD72A45DBF500BA213A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,8 +64,12 @@
 		AE588FB22A44D16500BA213A /* PizzaShop */ = {
 			isa = PBXGroup;
 			children = (
+				AE588FD22A45CFE200BA213A /* Menu */,
+				AE588FC92A45CC4B00BA213A /* Navigation */,
 				AE588FC82A44D1AD00BA213A /* Application */,
 				AE588FB72A44D16500BA213A /* ViewController.swift */,
+				AE588FCC2A45CDFE00BA213A /* Extensions */,
+				AE588FCF2A45CE3200BA213A /* Resources */,
 				AE588FC72A44D19800BA213A /* SupportingFiles */,
 			);
 			path = PizzaShop;
@@ -80,6 +94,38 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
+		AE588FC92A45CC4B00BA213A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AE588FCA2A45CCB300BA213A /* TabBarController.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		AE588FCC2A45CDFE00BA213A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE588FCD2A45CE1700BA213A /* UIColor + Ext.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AE588FCF2A45CE3200BA213A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE588FD02A45CE4800BA213A /* Resources.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AE588FD22A45CFE200BA213A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AE588FD32A45D14000BA213A /* MenuController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,6 +142,9 @@
 			dependencies = (
 			);
 			name = PizzaShop;
+			packageProductDependencies = (
+				AE588FD62A45DBF500BA213A /* SnapKit */,
+			);
 			productName = PizzaShop;
 			productReference = AE588FB02A44D16500BA213A /* PizzaShop.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +173,9 @@
 				Base,
 			);
 			mainGroup = AE588FA72A44D16500BA213A;
+			packageReferences = (
+				AE588FD52A45DBF500BA213A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = AE588FB12A44D16500BA213A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,6 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE588FB82A44D16500BA213A /* ViewController.swift in Sources */,
+				AE588FD42A45D14000BA213A /* MenuController.swift in Sources */,
+				AE588FCB2A45CCB300BA213A /* TabBarController.swift in Sources */,
+				AE588FCE2A45CE1700BA213A /* UIColor + Ext.swift in Sources */,
+				AE588FD12A45CE4800BA213A /* Resources.swift in Sources */,
 				AE588FB42A44D16500BA213A /* AppDelegate.swift in Sources */,
 				AE588FB62A44D16500BA213A /* SceneDelegate.swift in Sources */,
 			);
@@ -370,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE588FD52A45DBF500BA213A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE588FD62A45DBF500BA213A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE588FD52A45DBF500BA213A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE588FA82A44D16500BA213A /* Project object */;
 }
