@@ -47,6 +47,12 @@ class MenuViewController: UIViewController {
         barButtonItem.customView = button
         return barButtonItem
     }()
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.delegate = self
+        return scrollView
+    }()
     private let promoIdentifire = "promoCell"
     private lazy var promoCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -78,6 +84,7 @@ class MenuViewController: UIViewController {
     private let foodIdentifire = "foodCell"
     private lazy var foodTableView: UITableView = {
         let tableView = UITableView()
+        tableView.isScrollEnabled = false
         tableView.backgroundColor = .white
         tableView.layer.cornerRadius = 20
         tableView.layer.masksToBounds = true
@@ -85,7 +92,6 @@ class MenuViewController: UIViewController {
         tableView.delegate = self
         tableView.register(MenuFoodTableViewCell.self, forCellReuseIdentifier: foodIdentifire)
         tableView.allowsSelection = false
-        tableView.panGestureRecognizer.addObserver(self, forKeyPath: "state", options: [.new,.old], context: nil)
         tableView.addObserver(self, forKeyPath: "contentOffset", options: [.new,.old], context: nil)
         return tableView
     }()
@@ -111,24 +117,47 @@ class MenuViewController: UIViewController {
         getPizzas()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        scrollView.contentSize = CGSize(width: view.bounds.width,
+                                        height: view.bounds.height + scrollView.contentOffset.y - (tabBarController?.tabBar.frame.height ?? 0) + view.bounds.height * 0.15 + 23)
+
+    }
+    
     private func configureUI() {
         view.backgroundColor = R.Color.viewBackground
         
         navigationItem.leftBarButtonItem = leftBarButtonItem
-        view.addSubview(promoCollection)
-        view.addSubview(categoryCollection)
+        let navigationAppearance = UINavigationBarAppearance()
+        navigationAppearance.configureWithOpaqueBackground()
+        navigationAppearance.backgroundColor = R.Color.viewBackground
+        navigationAppearance.shadowColor = R.Color.viewBackground
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationAppearance
+        navigationController?.navigationBar.standardAppearance = navigationAppearance
+        
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = .white
+        tabBarController?.tabBar.scrollEdgeAppearance = tabBarAppearance
+        tabBarController?.tabBar.standardAppearance = tabBarAppearance
+        
+        view.addSubview(scrollView)
+        scrollView.addSubview(promoCollection)
+        scrollView.addSubview(categoryCollection)
         view.addSubview(foodTableView)
     }
     
     private func layout() {
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         promoCollection.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide)
-            make.left.right.equalToSuperview()
+            make.top.equalToSuperview()
+            make.left.right.equalTo(view)
             make.height.equalTo(view.bounds.height * 0.15)
         }
         categoryCollection.snp.makeConstraints { make in
             make.top.equalTo(promoCollection.snp.bottom).offset(24)
-            make.left.right.equalToSuperview()
+            make.left.right.equalTo(view)
             make.height.equalTo(32)
         }
         foodTableView.snp.makeConstraints { make in
@@ -311,7 +340,18 @@ extension MenuViewController {
         }
     }
     
-    func selectedCategoryCollectionCell(for indexPath: IndexPath) {
+    private func selectedCategoryCollectionCell(for indexPath: IndexPath) {
         categoryCollection.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+    }
+}
+
+extension MenuViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == self.scrollView {
+            foodTableView.isScrollEnabled = (self.scrollView.contentOffset.y >= 53)
+        }
+        if scrollView == self.foodTableView {
+            self.foodTableView.isScrollEnabled = (foodTableView.contentOffset.y > 0)
+        }
     }
 }
