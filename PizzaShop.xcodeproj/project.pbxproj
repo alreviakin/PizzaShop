@@ -9,28 +9,52 @@
 /* Begin PBXBuildFile section */
 		AE588FB42A44D16500BA213A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FB32A44D16500BA213A /* AppDelegate.swift */; };
 		AE588FB62A44D16500BA213A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FB52A44D16500BA213A /* SceneDelegate.swift */; };
-		AE588FB82A44D16500BA213A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FB72A44D16500BA213A /* ViewController.swift */; };
-		AE588FBD2A44D16700BA213A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE588FBC2A44D16700BA213A /* Assets.xcassets */; };
 		AE588FC02A44D16700BA213A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE588FBE2A44D16700BA213A /* LaunchScreen.storyboard */; };
 		AE588FCB2A45CCB300BA213A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FCA2A45CCB300BA213A /* TabBarController.swift */; };
 		AE588FCE2A45CE1700BA213A /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FCD2A45CE1700BA213A /* UIColor + Ext.swift */; };
 		AE588FD12A45CE4800BA213A /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FD02A45CE4800BA213A /* Resources.swift */; };
-		AE588FD42A45D14000BA213A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FD32A45D14000BA213A /* MenuController.swift */; };
+		AE588FD42A45D14000BA213A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FD32A45D14000BA213A /* MenuViewController.swift */; };
 		AE588FD72A45DBF500BA213A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE588FD62A45DBF500BA213A /* SnapKit */; };
+		AE588FD92A4604C700BA213A /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FD82A4604C700BA213A /* MenuInteractor.swift */; };
+		AE588FDB2A4604D300BA213A /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FDA2A4604D300BA213A /* MenuPresenter.swift */; };
+		AE588FDD2A4604EF00BA213A /* MenuModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FDC2A4604EF00BA213A /* MenuModels.swift */; };
+		AE588FDF2A46050200BA213A /* MenuWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FDE2A46050200BA213A /* MenuWorker.swift */; };
+		AE588FE22A46066300BA213A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FE12A46066300BA213A /* NetworkManager.swift */; };
+		AE588FE42A46067C00BA213A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FE32A46067C00BA213A /* ImageManager.swift */; };
+		AE588FE62A4609E200BA213A /* PromosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FE52A4609E200BA213A /* PromosManager.swift */; };
+		AE588FEB2A460A6000BA213A /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FEA2A460A6000BA213A /* Promo.swift */; };
+		AE588FEE2A460F2B00BA213A /* MenuPromoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FED2A460F2B00BA213A /* MenuPromoCollectionViewCell.swift */; };
+		AE588FF02A4612BF00BA213A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE588FEF2A4612BF00BA213A /* Assets.xcassets */; };
+		AE588FF22A46EDA200BA213A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FF12A46EDA200BA213A /* Food.swift */; };
+		AE588FF42A47254200BA213A /* ApiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FF32A47254200BA213A /* ApiType.swift */; };
+		AE588FF62A47269000BA213A /* MenuCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FF52A47269000BA213A /* MenuCategoryCollectionViewCell.swift */; };
+		AE588FFA2A47398500BA213A /* MenuFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE588FF92A47398500BA213A /* MenuFoodTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE588FB02A44D16500BA213A /* PizzaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE588FB32A44D16500BA213A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE588FB52A44D16500BA213A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE588FB72A44D16500BA213A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE588FBC2A44D16700BA213A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE588FBF2A44D16700BA213A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE588FC12A44D16700BA213A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE588FCA2A45CCB300BA213A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AE588FCD2A45CE1700BA213A /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		AE588FD02A45CE4800BA213A /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		AE588FD32A45D14000BA213A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		AE588FD32A45D14000BA213A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AE588FD82A4604C700BA213A /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		AE588FDA2A4604D300BA213A /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		AE588FDC2A4604EF00BA213A /* MenuModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModels.swift; sourceTree = "<group>"; };
+		AE588FDE2A46050200BA213A /* MenuWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuWorker.swift; sourceTree = "<group>"; };
+		AE588FE12A46066300BA213A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AE588FE32A46067C00BA213A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		AE588FE52A4609E200BA213A /* PromosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromosManager.swift; sourceTree = "<group>"; };
+		AE588FEA2A460A6000BA213A /* Promo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
+		AE588FED2A460F2B00BA213A /* MenuPromoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPromoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE588FEF2A4612BF00BA213A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE588FF12A46EDA200BA213A /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		AE588FF32A47254200BA213A /* ApiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiType.swift; sourceTree = "<group>"; };
+		AE588FF52A47269000BA213A /* MenuCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE588FF92A47398500BA213A /* MenuFoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFoodTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +88,11 @@
 		AE588FB22A44D16500BA213A /* PizzaShop */ = {
 			isa = PBXGroup;
 			children = (
-				AE588FD22A45CFE200BA213A /* Menu */,
-				AE588FC92A45CC4B00BA213A /* Navigation */,
 				AE588FC82A44D1AD00BA213A /* Application */,
-				AE588FB72A44D16500BA213A /* ViewController.swift */,
+				AE588FC92A45CC4B00BA213A /* Navigation */,
+				AE588FD22A45CFE200BA213A /* Menu */,
+				AE588FE02A46064000BA213A /* Managers */,
+				AE588FE92A460A5200BA213A /* Models */,
 				AE588FCC2A45CDFE00BA213A /* Extensions */,
 				AE588FCF2A45CE3200BA213A /* Resources */,
 				AE588FC72A44D19800BA213A /* SupportingFiles */,
@@ -78,7 +103,7 @@
 		AE588FC72A44D19800BA213A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				AE588FBC2A44D16700BA213A /* Assets.xcassets */,
+				AE588FEF2A4612BF00BA213A /* Assets.xcassets */,
 				AE588FBE2A44D16700BA213A /* LaunchScreen.storyboard */,
 				AE588FC12A44D16700BA213A /* Info.plist */,
 			);
@@ -121,9 +146,44 @@
 		AE588FD22A45CFE200BA213A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				AE588FD32A45D14000BA213A /* MenuController.swift */,
+				AE588FEC2A460F1100BA213A /* Views */,
+				AE588FD32A45D14000BA213A /* MenuViewController.swift */,
+				AE588FD82A4604C700BA213A /* MenuInteractor.swift */,
+				AE588FDA2A4604D300BA213A /* MenuPresenter.swift */,
+				AE588FDC2A4604EF00BA213A /* MenuModels.swift */,
+				AE588FDE2A46050200BA213A /* MenuWorker.swift */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		AE588FE02A46064000BA213A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AE588FE12A46066300BA213A /* NetworkManager.swift */,
+				AE588FE32A46067C00BA213A /* ImageManager.swift */,
+				AE588FE52A4609E200BA213A /* PromosManager.swift */,
+				AE588FF32A47254200BA213A /* ApiType.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		AE588FE92A460A5200BA213A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE588FEA2A460A6000BA213A /* Promo.swift */,
+				AE588FF12A46EDA200BA213A /* Food.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AE588FEC2A460F1100BA213A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE588FED2A460F2B00BA213A /* MenuPromoCollectionViewCell.swift */,
+				AE588FF52A47269000BA213A /* MenuCategoryCollectionViewCell.swift */,
+				AE588FF92A47398500BA213A /* MenuFoodTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE588FF02A4612BF00BA213A /* Assets.xcassets in Resources */,
 				AE588FC02A44D16700BA213A /* LaunchScreen.storyboard in Resources */,
-				AE588FBD2A44D16700BA213A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,13 +262,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE588FB82A44D16500BA213A /* ViewController.swift in Sources */,
-				AE588FD42A45D14000BA213A /* MenuController.swift in Sources */,
+				AE588FDD2A4604EF00BA213A /* MenuModels.swift in Sources */,
+				AE588FF42A47254200BA213A /* ApiType.swift in Sources */,
+				AE588FEB2A460A6000BA213A /* Promo.swift in Sources */,
+				AE588FFA2A47398500BA213A /* MenuFoodTableViewCell.swift in Sources */,
+				AE588FDB2A4604D300BA213A /* MenuPresenter.swift in Sources */,
+				AE588FDF2A46050200BA213A /* MenuWorker.swift in Sources */,
+				AE588FF22A46EDA200BA213A /* Food.swift in Sources */,
+				AE588FE42A46067C00BA213A /* ImageManager.swift in Sources */,
+				AE588FEE2A460F2B00BA213A /* MenuPromoCollectionViewCell.swift in Sources */,
+				AE588FD42A45D14000BA213A /* MenuViewController.swift in Sources */,
+				AE588FE62A4609E200BA213A /* PromosManager.swift in Sources */,
+				AE588FE22A46066300BA213A /* NetworkManager.swift in Sources */,
+				AE588FF62A47269000BA213A /* MenuCategoryCollectionViewCell.swift in Sources */,
 				AE588FCB2A45CCB300BA213A /* TabBarController.swift in Sources */,
 				AE588FCE2A45CE1700BA213A /* UIColor + Ext.swift in Sources */,
 				AE588FD12A45CE4800BA213A /* Resources.swift in Sources */,
 				AE588FB42A44D16500BA213A /* AppDelegate.swift in Sources */,
 				AE588FB62A44D16500BA213A /* SceneDelegate.swift in Sources */,
+				AE588FD92A4604C700BA213A /* MenuInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

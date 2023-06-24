@@ -43,7 +43,7 @@ final class TabBarController: UITabBarController {
     private func getController(for tab: Tabs) -> UIViewController {
         switch tab {
         case .menu:
-            return MenuController()
+            return MenuViewController()
         default:
             return UIViewController()
         }

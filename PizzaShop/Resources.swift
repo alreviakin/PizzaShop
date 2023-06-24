@@ -16,6 +16,8 @@ enum R {
         static let descriptionFont = UIColor(hexString: "#AAAAAD")
         static let inactive = UIColor(hexString: "#C3C4C9")
         static let viewBackground =  UIColor(hexString: "#F3F5F9")
+        static let selectedCategoryCell = UIColor(hexString: "#FD3A69", alpha: 0.2)
+        static let deselectedCategoryCell = UIColor(hexString: "#FD3A69", alpha: 0.4)
     }
     
     enum Image {
